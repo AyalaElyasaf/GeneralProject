@@ -1,0 +1,19 @@
+<div id="body"> 
+    <h1>name: {{recipe.name}}</h1>
+    <h4>level: {{recipe.Difficulty}}</h4>
+    <h4>is your favorite: {{recipe.isFavorite}}</h4>
+    <div >
+        <h1 id="ingredience">ingredience</h1>
+        <ul  *ngFor="let r of ingrediens">
+            <li>{{r}}</li>
+        </ul>
+    </div>
+
+    <div id="instructions">
+        <h1>instructions</h1>
+        <ul id="alls" *ngFor="let i of instructions">
+            <li>{{i}}</li>
+        </ul>
+    </div>
+   <app-my-heart (changeLikeEvent)="onChange(recipe)" (click)="onChange(recipe)" [recipe1]=recipe ></app-my-heart> 
+</div>

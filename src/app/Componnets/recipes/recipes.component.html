@@ -1,0 +1,14 @@
+<h1>our recipes list</h1>
+<div id="all" *ngFor="let r of recipes$ | async">
+    <button class="box orange">
+        <button> <a [routerLink]="['../specificRecipe', r.name]" (click)="onView()">{{r.name}}</a></button>
+        <div [ngClass]="{'hardLevel1':r.Difficulty===1,'hardLevel2':r.Difficulty===2,'hardLevel3':r.Difficulty===3}">
+            Difficulty Level
+        </div>
+        <p *ngIf="r.Difficulty===1"style="font-size: small;" > eazy</p>
+        <p *ngIf="r.Difficulty===2" style="font-size: small;">normal</p>
+        <p *ngIf="r.Difficulty===3" style="font-size: small;">hard</p>
+        <app-my-heart (changLikeEvent)="toggleLike($event)" [recipe1]=r (click)="onChange(r)"></app-my-heart>
+        <div *ngIf="isFav === '0'" (click)="DeleteRecipe(r)">🗑</div>
+    </button>
+</div>

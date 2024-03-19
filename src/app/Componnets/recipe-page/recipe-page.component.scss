@@ -1,0 +1,42 @@
+#body {
+	font-family: "Poppins", sans-serif;
+    list-style: none;
+	counter-reset: list-counter;
+    font-weight: 700;
+    width: clamp(30rem, calc(28vw), 33rem);
+    list-style: none;
+	counter-reset: list-counter;
+   margin-left: 600px;
+   margin-top: 100px;
+}
+
+h1 {
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+#instructions {
+	list-style: none;
+	counter-reset: list-counter;
+	margin-bottom: 1rem;	
+	margin-bottom: 2rem;
+	color: #000000;
+	font-weight: bold;
+	background-color: #FF7777;
+	width: 10rem;
+	height: 2.3rem;
+	border-radius: 50%;
+	margin-bottom: 0.5rem;
+}
+#ingredience{
+	list-style: none;
+	counter-reset: list-counter;
+	margin-bottom: 1rem;	
+	margin-bottom: 2rem;
+	color: #000000;
+	font-weight: bold;
+	background-color: #FF7777;
+	width: 10rem;
+	height: 2.3rem;
+	border-radius: 50%;
+	margin-bottom: 0.5rem;
+}

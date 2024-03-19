@@ -1,0 +1,117 @@
+<div id="all">
+
+    <div class="main"></div>
+    <div class="footer">
+        <div class="bubbles">
+            <div class="bubble"
+                style="--size:3.2524296556606815rem; --distance:6.566256843234753rem; --position:3.8446201670312785%; --time:3.360373644654302s; --delay:-2.3238433783631316s;">
+            </div>
+            
+            <div class="bubble"
+                style="--size:5.847150471154033rem; --distance:8.650701665409537rem; --position:38.96531639336254%; --time:3.0135827793632126s; --delay:-2.1280705849941173s;">
+            </div>
+            <div class="bubble"
+                style="--size:3.1906217893912334rem; --distance:9.170443338801228rem; --position:34.9357061081198%; --time:3.904359673943777s; --delay:-3.9695885955946504s;">
+            </div>
+            <div class="bubble"
+                style="--size:2.7251518154059315rem; --distance:8.305988632063237rem; --position:65.86822638221138%; --time:3.9506153602507283s; --delay:-2.028297035826903s;">
+            </div>
+            <div class="bubble"
+                style="--size:3.6848266458160053rem; --distance:9.540204306784707rem; --position:97.62901836913174%; --time:2.1071355361370614s; --delay:-2.9866196188664027s;">
+            </div>
+            <div class="bubble"
+                style="--size:2.8782736282630674rem; --distance:8.463483266224817rem; --position:52.87343205521756%; --time:2.0941751217893407s; --delay:-2.559295130153723s;">
+            </div>
+           
+            <div class="bubble"
+                style="--size:2.6409146830731514rem; --distance:7.265223559385274rem; --position:10.847406388368304%; --time:3.2309014588495772s; --delay:-3.4130866653865706s;">
+            </div>
+            <div class="bubble"
+                style="--size:5.910089409567062rem; --distance:7.060384297769387rem; --position:78.8118854549076%; --time:2.131209030849214s; --delay:-3.6600008082911617s;">
+            </div>
+            <div class="bubble"
+                style="--size:3.5870602748153146rem; --distance:6.709337049258994rem; --position:-0.47408955405587605%; --time:2.895480712361815s; --delay:-3.46092123063914s;">
+            </div>
+            <div class="bubble"
+                style="--size:4.852429149543178rem; --distance:6.1972808853098345rem; --position:4.603159917174619%; --time:3.69464940026017s; --delay:-3.370933862204814s;">
+            </div>
+            <div class="bubble"
+                style="--size:5.582055365323683rem; --distance:7.088021307431712rem; --position:75.86388974019337%; --time:3.000754469583117s; --delay:-3.3381275156802106s;">
+            </div>
+            <div class="bubble"
+                style="--size:5.274583330011741rem; --distance:7.723232307677212rem; --position:98.29189351260905%; --time:3.7170739824769763s; --delay:-3.300230158287816s;">
+            </div>
+           
+            <div class="bubble"
+                style="--size:5.371935253342695rem; --distance:9.898948698584512rem; --position:42.92342999647545%; --time:3.252462437723635s; --delay:-2.48294161448656s;">
+            </div>
+            <div class="bubble"
+                style="--size:2.835388975152286rem; --distance:7.263052151449993rem; --position:85.76388817559199%; --time:3.7368546405327923s; --delay:-2.519399955001259s;">
+            </div>
+            <div class="bubble"
+                style="--size:2.02996426401896rem; --distance:7.03910160263946rem; --position:43.85189674529462%; --time:3.580111259073335s; --delay:-2.0259224703812486s;">
+            </div>
+            <div class="bubble"
+                style="--size:5.658431595567046rem; --distance:9.88204387017912rem; --position:52.78921290272079%; --time:2.3519731341070913s; --delay:-2.4546965521426087s;">
+            </div>
+            <div class="bubble"
+                style="--size:4.072530544554615rem; --distance:8.152003391042712rem; --position:34.04537961914469%; --time:3.251792339825339s; --delay:-3.659581227727937s;">
+            </div>
+            <div class="bubble"
+                style="--size:3.7027980640371645rem; --distance:8.014829001715452rem; --position:26.836629078513674%; --time:3.0046942927762914s; --delay:-3.909024297103098s;">
+            </div>
+            <div class="bubble"
+                style="--size:4.1211962457941045rem; --distance:8.5403007586662rem; --position:32.76061764812094%; --time:3.186719032540355s; --delay:-2.1209258581416406s;">
+            </div> 
+            <div class="bubble"
+                style="--size:2.7600467927830508rem; --distance:8.232596425230883rem; --position:66.09147568830183%; --time:2.6543747115184604s; --delay:-2.078952309366037s;">
+            </div> 
+        </div>
+        <div class="content">
+            <div>
+                <h1> statistics</h1>
+                <div class="card">
+                    <div id="theText">
+                        <h1>{{curDate | date:'yyyy-MM-dd'}}</h1>
+                        <h1 *ngIf="(loves$ | async) > 0">{{loves$ | async}} Marks as a favorite recipe</h1>
+                        <h1 *ngIf="(views$ | async) > 0">{{views$ | async}} views to our recipes</h1>
+                        <div *ngIf="(loves$ | async) < 0">
+                            <h1 *ngIf="(views$ | async) < 0">Nobody did anything here today, wanna be first?</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <svg style="position:fixed; top:100vh">
+        <defs>
+            <filter id="blob">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                    result="blob"></feColorMatrix>
+            </filter>
+        </defs>
+    </svg>
+
+    <div class="face-container">
+        <div class="face"
+            style="--left-lower-rotation:20deg;--left-lower-position:40%;--left-upper-rotation:0deg;--left-upper-position:0%;--right-lower-rotation:-20deg;--right-lower-position:40%;--right-upper-rotation:0deg;--right-upper-position:0%;--face-rotation-x:0deg;--face-rotation-y:0deg;--face-rotation-z:0deg;">
+            <div class="eye left">
+                <div class="lower">
+                    <div class="lid"></div>
+                </div>
+                <div class="upper">
+                    <div class="lid"></div>
+                </div>
+            </div>
+            <div class="eye right">
+                <div class="lower">
+                    <div class="lid"></div>
+                </div>
+                <div class="upper">
+                    <div class="lid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

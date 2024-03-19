@@ -1,0 +1,27 @@
+<form [formGroup]="recipeFormGroup" (ngSubmit)="add()">
+<br><br><br><br><br><br>
+    <input formControlName="recipeName" id="recipeName" type="text" placeholder="enter recipe name" maxlength="20" ><br>
+    <input formControlName="level" id="level" pattern="[1-3]" type="number" placeholder="enter recipe dificulty level" min="1" max="3" normal="2" required="required"><br>
+    
+    <app-my-heart id="heart" (changeLikeEvent)="changeFavorite(!isLiked)"  [recipe1]=r></app-my-heart>
+
+    <!-- לולאה שמוסיפה מוצרים למתכון -->
+    <div formArrayName="ingredients">
+        <div *ngFor="let ingredient of ingredients.controls; let i = index" [formGroupName]="i">
+            <input formControlName="ingredient" placeholder="Enter ingredient">
+        </div>
+    </div>
+    <button type="button" (click)="addNewIngredient()">Add ingredient</button>
+    <br>
+    <!-- לולאה שמוסיפה הוראות למתכון -->
+    <div formArrayName="instructions">
+        <div *ngFor="let instruction of instructions.controls; let j = index" [formGroupName]="j">
+            <input formControlName="instruction" placeholder="Enter instruction">
+        </div>
+    </div>
+   <button type="button" (click)="addNewInstruction()">Add instruction</button><br>   
+    <button class="button" type="submit">add the recipe</button><br>
+    
+    <h1 *ngIf="x">thanks for your recipe to {{this.r.name}}!🙏</h1>  
+      
+</form>
