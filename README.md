@@ -2,8 +2,6 @@
 
 Welcome to Recipe Share, an Angular-based application for sharing and viewing delicious recipes from around the world!
 
-![App Screenshot](link-to-screenshot.png)
-
 ## Table of Contents
 
 - [About the App](#about-the-app)
@@ -33,7 +31,6 @@ Recipe Share is a community-driven platform where users can share their favorite
 - **TypeScript**: Primary language for Angular development.
 - **HTML5**: Markup language for creating the application structure.
 - **CSS3**: Styling for an appealing visual design.
-- **Firebase**: Backend services for authentication and database.
 
 ## Installation
 
